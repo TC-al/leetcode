@@ -1,19 +1,10 @@
 class Solution {
-    public int searchInsert(int[] nums, int target) {
-        
-        List<Integer> l = new ArrayList<>();
-        for (var x : nums) {
-            l.add(x);
-        }
-
-        l.add(target);
-        Collections.sort(l);
-        
-        for (int i = 0; i < l.size(); i++) {
-            if (l.get(i) == target) {
+    public int searchInsert(int[] nums, int target) {  
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] >= target) {
                 return i;
             }
         }
-        return 0;
+        return nums.length;
     }
 }
