@@ -13,7 +13,6 @@ class Solution:
                         divisors += 1
                         temp += num / i
 
-            print(divisors, temp)
             if divisors == 4:
                 result += temp
         
